@@ -55,6 +55,9 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
+          Container(
+            color: const Color(0xFF1D1E33),
+          )
         ],
       ),
     );
