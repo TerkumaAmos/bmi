@@ -64,7 +64,7 @@ class _InputPageState extends State<InputPage> {
 class ReusableCard extends StatelessWidget {
   ReusableCard({required this.Colour});
 
-  Color Colour;
+  final Color Colour;
 
   @override
   Widget build(BuildContext context) {
