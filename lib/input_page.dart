@@ -59,7 +59,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Container(
             color: const Color(0xFFEB1555),
-            margin: const EdgeInsets.only(top: 10.0),
+            margin: const EdgeInsets.only(top: 20.0),
             width: double.infinity,
             height: bottomContainerHeight,
           )
