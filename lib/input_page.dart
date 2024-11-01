@@ -17,16 +17,17 @@ class _InputPageState extends State<InputPage> {
       body: const Column(
         children: [
           Expanded(
-              child: Row(
-            children: [
-              Expanded(
-                child: ReusableCard(),
-              ),
-              Expanded(
-                child: ReusableCard(),
-              ),
-            ],
-          )),
+            child: Row(
+              children: [
+                Expanded(
+                  child: ReusableCard(),
+                ),
+                Expanded(
+                  child: ReusableCard(),
+                ),
+              ],
+            ),
+          ),
           Expanded(
             child: ReusableCard(),
           ),
