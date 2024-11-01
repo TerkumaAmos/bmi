@@ -14,31 +14,41 @@ class _InputPageState extends State<InputPage> {
         title: const Text('BMI CALCULATOR'),
         centerTitle: true,
       ),
-      body: const Column(
+      body: Column(
         children: [
           Expanded(
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    Colour: Color(0xFF1D1E33),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    Colour: Color(0xFF1D1E33),
+                  ),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: ReusableCard(),
+            child: ReusableCard(
+              Colour: Color(0xFF1D1E33),
+            ),
           ),
           Expanded(
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    Colour: Color(0xFF1D1E33),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    Colour: Color(0xFF1D1E33),
+                  ),
                 )
               ],
             ),
@@ -50,9 +60,9 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  const ReusableCard({
-    super.key,
-  });
+  ReusableCard({required this.Colour});
+
+  Color Colour;
 
   @override
   Widget build(BuildContext context) {
