@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, library_private_types_in_public_api, use_key_in_widget_constructors, prefer_const_constructors, non_constant_identifier_names, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 
@@ -25,12 +25,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    Colour: Color(0xFF1D1E33),
+                    Colour: const Color(0xFF1D1E33),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    Colour: Color(0xFF1D1E33),
+                    Colour: const Color(0xFF1D1E33),
                   ),
                 ),
               ],
@@ -38,7 +38,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              Colour: Color(0xFF1D1E33),
+              Colour: const Color(0xFF1D1E33),
             ),
           ),
           Expanded(
@@ -46,12 +46,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    Colour: Color(0xFF1D1E33),
+                    Colour: const Color(0xFF1D1E33),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    Colour: Color(0xFF1D1E33),
+                    Colour: const Color(0xFF1D1E33),
                   ),
                 )
               ],
@@ -59,7 +59,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Container(
             color: const Color(0xFFEB1555),
-            margin: EdgeInsets.only(top: 10.0),
+            margin: const EdgeInsets.only(top: 10.0),
             width: double.infinity,
             height: bottomContainerHeight,
           )
