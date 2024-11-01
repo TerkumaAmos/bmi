@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class InputPage extends StatefulWidget {
@@ -69,7 +71,7 @@ class ReusableCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
-        color: Color(0xFF1D1E33),
+        color: Colour,
         borderRadius: BorderRadius.circular(10.0),
       ),
     );
