@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
 
 class ReusableCard extends StatelessWidget {
@@ -10,7 +12,7 @@ class ReusableCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: cardChild,
-      margin: EdgeInsets.all(15.0),
+      margin: const EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         color: Colour,
         borderRadius: BorderRadius.circular(20.0),
