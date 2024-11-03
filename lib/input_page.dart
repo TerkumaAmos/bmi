@@ -1,12 +1,10 @@
+// ignore_for_file: library_private_types_in_public_api, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
-
-const bottomContainerHeight = 80.0;
-const activeCardColour = Color(0xFF1D1E33);
-const inactiveCardColour = Color(0xFF111328);
-const bottomContainerColour = Color(0xFFEB1555);
+import 'constants.dart';
 
 enum Gender {
   male,
@@ -20,6 +18,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender? selectedGender;
+  int height = 180;
   //Color maleCardColour = inactiveCardColour;
   // Color femaleCardColour = inactiveCardColour;
   // void updateColour(Gender selectedGender) {
@@ -46,6 +45,7 @@ class _InputPageState extends State<InputPage> {
         centerTitle: true,
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -53,15 +53,17 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      setState(() {
-                        selectedGender = Gender.male;
-                      });
+                      setState(
+                        () {
+                          selectedGender = Gender.male;
+                        },
+                      );
                     },
                     child: ReusableCard(
                       Colour: selectedGender == Gender.male
-                          ? activeCardColour
-                          : inactiveCardColour,
-                      cardChild: IconContent(
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
+                      cardChild: const IconContent(
                         icon: FontAwesomeIcons.mars,
                         label: 'MALE',
                       ),
@@ -79,9 +81,9 @@ class _InputPageState extends State<InputPage> {
                     },
                     child: ReusableCard(
                       Colour: selectedGender == Gender.female
-                          ? activeCardColour
-                          : inactiveCardColour,
-                      cardChild: IconContent(
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
+                      cardChild: const IconContent(
                         icon: FontAwesomeIcons.venus,
                         label: 'FEMALE',
                       ),
@@ -91,16 +93,46 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
+          Expanded(
+            child: ReusableCard(
+              Colour: kActiveCardColour,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'HEIGHT',
+                    style: kLabelTextStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: [
+                      Text(
+                        height.toString(),
+                        style: kNumberTextStyle,
+                      ),
+                      Text(
+                        'cm',
+                        style: kLabelTextStyle,
+                      )
+                    ],
+                  ),
+                  Slider(value: value, onChanged: onChanged)
+                ],
+              ),
+            ),
+          ),
           const Expanded(
             child: Row(
               children: [],
             ),
           ),
           Container(
-            color: bottomContainerColour,
+            color: kBottomContainerColour,
             margin: const EdgeInsets.only(top: 20.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           ),
         ],
       ),

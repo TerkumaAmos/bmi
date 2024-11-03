@@ -1,9 +1,9 @@
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, non_constant_identifier_names, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
 class ReusableCard extends StatelessWidget {
-  ReusableCard({required this.Colour, required this.cardChild});
+  const ReusableCard({required this.Colour, required this.cardChild});
 
   final Color Colour;
   final Widget cardChild;
