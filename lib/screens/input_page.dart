@@ -254,13 +254,14 @@ class _InputPageState extends State<InputPage> {
             buttonTitle: 'CALCULATE',
             onTap: () {
               if (selectedGender == null) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   content: Text('Please select a gender to continue'),
                 ));
                 return;
               }
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight);
+              final bmiResult = calc.calculateBMI();
               Navigator.push(
                 context,
                 MaterialPageRoute(
