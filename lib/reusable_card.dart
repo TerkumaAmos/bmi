@@ -1,4 +1,4 @@
-// ignore_for_file: sort_child_properties_last, non_constant_identifier_names, use_key_in_widget_constructors
+// ignore_for_file: sort_child_properties_last, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 
