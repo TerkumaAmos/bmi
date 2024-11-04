@@ -5,7 +5,7 @@ class CalculatorBrain {
     required this.height,
     required this.weight,
   });
-//It's only 12am and  i'm the only dev coding in north east Nigeria
+
   final int height;
   final int weight;
 
