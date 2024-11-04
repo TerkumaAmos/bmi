@@ -56,14 +56,14 @@ class Resultspage extends StatelessWidget {
                   Text(
                     interpretation,
                     textAlign: TextAlign.center,
-                    style: kBodyTextSTyle,
+                    style: kBodyTextStyle,
                   ),
                 ],
               ),
             ),
           ),
           BottomButton(
-            buttonTitle: 'RE_CALACULATE',
+            buttonTitle: 'RECALCULATE',
             onTap: () {
               Navigator.pop(context);
             },

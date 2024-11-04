@@ -253,6 +253,12 @@ class _InputPageState extends State<InputPage> {
           BottomButton(
             buttonTitle: 'CALCULATE',
             onTap: () {
+              if (selectedGender == null) {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text('Please select a gender to continue'),
+                ));
+                return;
+              }
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight);
               Navigator.push(
