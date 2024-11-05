@@ -7,7 +7,8 @@ import '../components/reusable_card.dart';
 import 'package:bmi_calculator/components/buttom_button.dart';
 
 class Resultspage extends StatelessWidget {
-  Resultspage({
+  const Resultspage({
+    super.key,
     required this.resultText,
     required this.interpretation,
     required this.bmiResult,
@@ -21,7 +22,7 @@ class Resultspage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BMI CALCULATOR"),
+        title: const Text("BMI CALCULATOR"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,7 +30,7 @@ class Resultspage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(25.0),
               alignment: Alignment.bottomLeft,
               child: const Text(
                 'Your Result',

@@ -128,7 +128,7 @@ class _InputPageState extends State<InputPage> {
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
                       activeTrackColor: Colors.white,
-                      activeTickMarkColor: Color(0xFF8D8E98),
+                      activeTickMarkColor: const Color(0xFF8D8E98),
                       thumbColor: const Color(0xFFEB1555),
                       overlayColor: const Color(0x29EB1555),
                       thumbShape:
